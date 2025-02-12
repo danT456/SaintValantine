@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>San Valentín</title>
+    <style>
+        body {
+            background-image: url('https://marketplace.canva.com/EAF5fUZ-IxI/1/0/1600w/canva-rosa-y-rojo-poderoso-femme-personal-patr%C3%B3n-d%C3%ADa-del-amor-y-la-amistad-fondo-de-pantalla-de-escritorio--HnZrskLfRM.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            height: 100vh;
+            overflow: hidden;
+            text-align: center;
+        }
+        #pregunta-container, #mensaje-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+        #pregunta, #mensaje {
+            font-size: 72px;
+            font-weight: bold;
+            color: #ff66b2;
+        }
+        #mensaje {
+            font-size: 100px;
+        }
+        #gif-container {
+            width: 400px;
+            height: 400px;
+            background: url('https://i.pinimg.com/originals/91/cb/7a/91cb7a20957a184e55f1bfe3b1dead0e.gif') center/cover no-repeat;
+            margin-top: 20px;
+        }
+        #botones {
+            margin-top: 20px;
+        }
+        button {
+            font-size: 32px;
+            padding: 15px 30px;
+            margin: 10px;
+            cursor: pointer;
+            background-color: #add8e6;
+            border: none;
+            border-radius: 10px;
+        }
+        #mensaje-container {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="pregunta-container">
+        <div id="pregunta">Saori, quieres ser mi San Valentín?</div>
+    </div>
+    <div id="gif-container"></div>
+    <div id="botones">
+        <button id="si" onclick="aceptar()">Sí</button>
+        <button id="no" onmouseover="moverBoton(this)">No</button>
+    </div>
+    <div id="mensaje-container">
+        <div id="mensaje">Sabía que dirías que sí!</div>
+    </div>
+
+    <script>
+        function aceptar() {
+            document.getElementById("mensaje-container").style.display = "block";
+            document.getElementById("pregunta-container").style.display = "none";
+            document.getElementById("botones").style.display = "none";
+            document.getElementById("gif-container").style.backgroundImage = "url('https://www.icegif.com/wp-content/uploads/2024/05/cinnamoroll-icegif-1.gif')";
+        }
+
+        function moverBoton(boton) {
+            let x = Math.random() * (window.innerWidth - 200);
+            let y = Math.random() * (window.innerHeight - 200);
+            boton.style.position = "absolute";
+            boton.style.left = ${x}px;
+            boton.style.top = ${y}px;
+        }
+    </script>
+</body>
+</html>
