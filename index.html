@@ -49,6 +49,7 @@
             background-color: #add8e6;
             border: none;
             border-radius: 10px;
+            position: relative;
         }
         #mensaje-container {
             display: none;
@@ -79,9 +80,8 @@
         function moverBoton(boton) {
             let x = Math.random() * (window.innerWidth - 200);
             let y = Math.random() * (window.innerHeight - 200);
-            boton.style.position = "absolute";
-            boton.style.left = ${x}px;
-            boton.style.top = ${y}px;
+            boton.style.left = x + "px";
+            boton.style.top = y + "px";
         }
     </script>
 </body>
